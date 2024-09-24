@@ -61,52 +61,57 @@ public:
     std::string calles;
     std:: string numero;
     std::string localidad;
-    int antiguedad;
+   /* int antiguedad;
     float superficie_total;
     float superficie_cubierta;
     int habitaciones;
-
+*/
 
 
     cout<<"Ingrese Datos de la Casa:"<<endl;
     cout<<endl;
 
     cout<<"Codigo:"<<endl;
-    cin>>codigo;
-    _codigo=codigo;
+    cin>>this->_codigo;
+
 
     cout<<"Calle:"<<endl;
     cin.ignore();
     getline(cin, calles);
+    strcpy(_calles, calles.c_str());
+
 
     cout<<"Numero:"<<endl;
     cin.ignore();
     getline(cin, numero);
+    strcpy(_numero, numero.c_str());
+
 
     cout<<"Localidad:"<<endl;
     cin.ignore();
     getline(cin, localidad);
-     strcpy(_localidad, localidad.c_str());
+    strcpy(_localidad, localidad.c_str());
+
 
     cout<<"Antiguedad:"<<endl;
-    cin>>antiguedad;
-    _antiguedad=antiguedad;
+    cin>>this->_antiguedad;
 
-    cout<<"Superficie:"<<endl;
-    cin>>superficie_total;
-    _superficie_total=superficie_total;
+    cout<<"Superficie Total:"<<endl;
+    cin>>this->_superficie_total;
+
 
     cout<<"Superficie cubierta:"<<endl;
-    cin>>superficie_cubierta;
-    _superficie_cubierta=superficie_cubierta;
+    cin>>this->_superficie_cubierta;
+
 
     cout<<"Habitaciones:"<<endl;
-    cin>>habitaciones;
-    _habitaciones=habitaciones;
+    cin>>this->_habitaciones;
 
+    cout<<endl;
+    precios.cargar();
 
-   precios.cargar();
-   duenio.cargar();
+    cout<<endl;
+    duenio.cargar();
 
     }
 

@@ -11,37 +11,6 @@ using namespace std;
 
 class Duenio
 {
-public:
-    Duenio(){};
-
-    void cargar(){
-    std::string apellido;
-    std::string nombre;
-    std::string dni;
-    std::string celu;
-
-    cout<<"Ingrese Datos del duenio:"<<endl;
-    cout<<endl;
-
-     cout<<"Apellido: "<<endl;
-     getline(cin, apellido);
-     cin.ignore();
-
-
-    cout<<"Nombre:"<<endl;
-      cin.ignore();
-      getline(cin,nombre);
-
-    cout<<"Dni:"<<endl;
-      cin.ignore();
-    getline(cin,dni);
-
-    cout<<"Celular:"<<endl;
-    cin.ignore();
-    getline(cin,celu);
-
-    }
-
 
 protected:
 private:
@@ -59,6 +28,44 @@ private:
     void set_nombre(std::string);
     void set_dni(std::string);
     void set_celu(std::string);
+
+public:
+    Duenio(){};
+
+    void cargar(){
+    std::string apellido;
+    std::string nombre;
+    std::string dni;
+    std::string celu;
+
+    cout<<"Ingrese Datos del duenio:"<<endl;
+    cout<<endl;
+
+     cout<<"Apellido: "<<endl;
+     cin.ignore();
+     getline(cin, apellido);
+     strcpy(_apellido, apellido.c_str());
+
+
+
+    cout<<"Nombre:"<<endl;
+    cin.ignore();
+    getline(cin,nombre);
+    strcpy(_nombre, nombre.c_str());
+
+
+    cout<<"Dni:"<<endl;
+    cin.ignore();
+    getline(cin,dni);
+    strcpy(_dni, dni.c_str());
+
+
+    cout<<"Celular:"<<endl;
+    cin.ignore();
+    getline(cin,celu);
+    strcpy(_celular, celu.c_str());
+
+    }
 
 
 

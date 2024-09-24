@@ -26,11 +26,11 @@ public:
     void set_alquiler(float);
 
     void cargar(){
-    float precio_venta,precio_alquiler;
-    int opc;
-    cout<<"Esta a la Venta o Alquiler? (1: Venta, 2: Alquiler): "<<endl;
-    cin>>opc;
 
+    int opc;
+    cout<<"Esta a la Venta o Alquiler? (1: Venta, 2: Alquiler): ";
+    cin>>opc;
+cout<<endl;
     switch(opc){
 
 case 1:
